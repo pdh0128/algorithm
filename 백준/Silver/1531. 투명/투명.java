@@ -20,12 +20,10 @@ public class Main {
       for(int j = lx - 1; j < rx; ++j) {
         for(int k = ly - 1; k < ry; ++k) {
           matrix[j][k] += 1;
+          if (matrix[j][k] == m + 1) {
+            ++cnt;
+          }
         }
-      }
-    }
-    for(int i = 0; i < 100; ++i) {
-      for(int j = 0; j < 100; ++j) {
-        if (matrix[i][j] > m) ++cnt;
       }
     }
     System.out.println(cnt);
